@@ -1,0 +1,14 @@
+{
+  "name": "HomeSick",
+  "app_id": "8f815d9f",
+  "type": "ionic1",
+  "integrations": {
+    "gulp": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
