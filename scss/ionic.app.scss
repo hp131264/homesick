@@ -1,23 +1,873 @@
-/*
-To customize the look and feel of Ionic, you can override the variables
-in ionic's _variables.scss file.
-
-For example, you might change some of the default colors:
-
-$light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
-*/
-
-// The path for our ionicons font files, relative to the built CSS in www/css
+$assertive: #F55D5D;
+$energized: #F095F0;
+$balanced: #33cd5f;
+$link-color: $balanced;
+$bg: #222d38;
+$bg-darker: #181e25;
+$bg-darker-ex: #0a0d11;
+$bg-alt: #3e4d5e;
+$white: #fff;
+$light-extra: #eaeef1;
+$light: #dadfe4;
+$darker: #282c2e;
+$darker-light: #747778;
+$primary-color: #18c0c7;
+$gradient1: #15aaab;
+$gradient2: #19d48e;
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+//VARIABLES
 
-// Include all of Ionic
-@import "www/lib/ionic/scss/ionic";
+
+
+
+
+
+
+
+
+
+
+
+
+.to-hide {
+	display: none!important;
+}
+
+.colored-bg {
+	background: #15aaab!important;
+	/* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient(left, #15aaab , #19d48e)!important;
+	/* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(right, #15aaab, #19d48e)!important;
+	/* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(right, #15aaab, #19d48e)!important;
+	/* For Firefox 3.6 to 15 */
+	    background: linear-gradient(to right, #15aaab , #19d48e)!important;
+	/* Standard syntax */}
+.exploded {
+	strong {
+		background: -webkit-linear-gradient(#15aaab, #19d48e);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	
+}
+//BAR
+.bar {
+	border-color: transparent!important;
+	.header-item {
+		margin-top: 15px;
+	}
+	
+	.title {
+		font-weight: bold!important;
+	}
+	
+}
+.bar.bar-assertive {
+	border-color: transparent!important;
+	background: #00adb4;
+}
+
+/*body.header-hack.platform-ios ion-nav-bar .bar.bar-header, body.header-hack.platform-ios ion-side-menu > .bar.bar-header {
+	height: 70px!important;
+}
+
+*/
+.bar-header {
+	height: 70px!important;
+	/*padding-top: 13px!important;
+	*/
+	  button {
+		margin-top: -5px!important;
+	}
+	
+	.back-button {
+		margin-top: 12px!important;
+	}
+	
+}
+//Modifing Item Inputs
+#login-input6, #login-input5 {
+	background-color: rgba(0,0,0,0.1)!important;
+	border: solid 1px rgba(0,0,0,0.3);
+	margin-top: 10px;
+	input {
+		color: #fff!important;
+	}
+	
+}
+#signup-form3 {
+	.input-label {
+		padding: 0px!important;
+	}
+	
+}
+.select-input-max-h {
+	max-height: 55px!important;
+}
+
+.item-complex .item-content, .item-radio .item-content {
+	background: $bg!important;
+	cursor: pointer;
+	color: $primary-color!important;
+	&: hover {
+		background: $bg-darker!important;
+		color: $white!important;
+		/*&: before {
+			//display: inline-block!important;
+			content: "\00a0";
+			width: 6px!important;
+			margin-right: 6px!important;
+			background: $primary-color!important;
+		}
+		
+		*/}
+}
+#menu-list1 {
+	.item {
+		background: $bg!important;
+		cursor: pointer;
+		color: $primary-color!important;
+		border: none!important;
+		&: hover {
+			background: $bg-darker!important;
+			color: $white!important;
+			/*&: before {
+				//display: inline-block!important;
+				content: "\00a0";
+				width: 6px!important;
+				margin-right: 6px!important;
+				background: $primary-color!important;
+			}
+			
+			*/}
+	}
+}
+.img-profile {
+	img {
+		max-width: 90px!important;
+		max-height: 90px!important;
+		border-radius: 50%!important;
+	}
+	
+}
+.share-city {
+	p {
+		&: before {
+			display: inline;
+			font-family: Ionicons;
+			content: "\f3a3";
+			margin-right: 6px!important;
+		}
+		
+	}
+}
+.mt-minus-5 {
+	margin-top: -5px!important;
+}
+
+.img-embassy {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%!important;
+	border: solid 5px rgba(0,0,0,0.5)!important;
+}
+
+.mt-minus-10 {
+	margin-top: -10px!important;
+}
+
+.btn-menu-footer-l {
+	border-radius: 0px!important;
+	border-top: solid 1px rgba(255,255,255,0.1)!important;
+	border-right: solid 1px rgba(255,255,255,0.1)!important;
+	border-left: transparent!important;
+	border-bottom: transparent!important;
+	border-color: rgba(255,255,255,0.1)!important;
+	margin-bottom: -1px!important;
+	&: hover {
+		background: rgba(0,0,0,0.2)!important;
+		color: $primary-color!important;
+	}
+	
+}
+.btn-menu-footer-r {
+	border-radius: 0px!important;
+	border-top: solid 1px rgba(255,255,255,0.1)!important;
+	border-right: transparent!important;
+	border-left: transparent!important;
+	border-bottom: transparent!important;
+	border-color: rgba(255,255,255,0.1)!important;
+	margin-bottom: -1px!important;
+	&: hover {
+		background: rgba(0,0,0,0.2)!important;
+		color: $primary-color!important;
+	}
+	
+}
+.mt-3 {
+	margin-top: 3px!important;
+}
+
+.mt-5 {
+	margin-top: 5px!important;
+}
+
+.mt-10 {
+	margin-top: 10px!important;
+}
+
+.mt-15 {
+	margin-top: 15px!important;
+}
+
+.mt-20 {
+	margin-top: 20px!important;
+}
+
+.mt-25 {
+	margin-top: 25px!important;
+}
+
+.mr-10 {
+	margin-right: 10px!important;
+}
+
+.heading-nation {
+	&: before {
+		display: inline!important;
+		content: "\f38c";
+		font-family: "Ionicons";
+		margin-right: 5px;
+	}
+	
+}
+.centered {
+	text-align: center!important;
+}
+
+//NATIONS
+#homesick6-select2 {
+	select {
+		background: rgba(0,0,0,0.4)!important;
+		background-color: rgba(0,0,0,0.4)!important;
+	}
+	
+}
+#homesick6-select7 {
+	select {
+		background: rgba(0,0,0,0.4)!important;
+		background-color: rgba(0,0,0,0.4)!important;
+	}
+	
+}
+.nation-sections {
+	.item {
+		background-color: $white!important;
+		background: $white!important;
+		border-radius: 4px!important;
+	}
+	
+	.item-complex .item-content, .item-radio .item-content {
+		background-color: $white!important;
+		background: $white!important;
+		border-radius: 4px!important;
+	}
+	
+}
+.blacked-input {
+	border-radius: 0px 0px 0px 0px!important;
+	background-color: rgba(0,0,0,0.4)!important;
+	border: solid 3px rgba(0,0,0,0.3);
+	color: $white!important;
+	input, select {
+		color: $white!important;
+	}
+	
+	span.input-label {
+		color: $light!important;
+	}
+	
+	/*.item-select select {
+		background-color: rgba(0,0,0,0.4)!important;
+		background: rgba(0,0,0,0.4)!important;
+	}
+	
+	*/}
+#homesick5-select2 select {
+	background-color: rgba(0,0,0,0.4)!important;
+	background: rgba(0,0,0,0.4)!important;
+}
+
+.item-select select {
+	border-radius: 0px 0px 0px 0px!important;
+	//background-color: rgba(0,0,0,0.4);
+}
+
+.map-container {
+	width: 100%!important;
+	padding: 0px 3px 0px 3px!important;
+	background: transparent!important;
+}
+
+#homesick10-list9 {
+	.item {
+		overflow: auto!important;
+		white-space: normal!important;
+		background-color: #fff!important;
+		border-color: #fff!important;
+		border-radius: 5px 5px 0px 0px!important;
+	}
+	
+}
+.bg-bnt-call {
+	background: #33CD5F!important;
+	border-radius: 0px 0px 5px 5px!important;
+}
+
+//OPTION BLOCKS
+.option-blocks-menu {
+	width: 100%!important;
+	background: rgba(255,255,255,0.5)!important;
+	padding: 15px!important;
+	border: solid 1px rgba(255,255,255,0.7)!important;
+	border-radius: 4px!important;
+	display: inline!important;
+	color: $white!important;
+	font-weight: 600!important;
+	font-size: 15px!important;
+	i.icon {
+		font-size: 49px!important;
+	}
+	
+	&: hover {
+		background: rgba(255,255,255,0.9)!important;
+		color: $primary-color!important;
+	}
+	
+	//float: left!important;
+}
+
+.img-user-profile {
+	position: fixed!important;
+	float: right!important;
+	z-index: 9999999999999999999999999999999999!important;
+	width: 50px!important;
+	height: 50px!important;
+	border-radius: 50%!important;
+	top: -25px!important;
+	right: 10px!important;
+}
+
+.ion-ios-contact {
+	&: before {
+		content: "\00a0"!important;
+	}
+	
+	&: after {
+		background-image: url("https: //s3.amazonaws.com/ionic-io-static/VT6h3eDbRLKTQtXCiNI7_tumblr_m5ba40QiFR1qdq19eo2_r1_1280.jpg");
+		background-size: cover!important;
+		background-repeat: no-repeat;
+		display: inline;
+		//position: absolute!important;
+		width: 40px;
+		height: 40px;
+		top: 4px;
+		left: -20px!important;
+		border-radius: 50%!important;
+		content: "";
+		z-index: 9999999999!important;
+	}
+	
+}
+.footer-peoples {
+	width: 100%!important;
+	text-align: right;
+	font-weight: bold;
+	/*float: right!important;
+	position: relative;
+	*/
+	    margin-top: 0px!important;
+	color: $white!important;
+}
+
+#page2 {
+	.item {
+		background: rgba(0,0,0,.3)!important;
+		color: $light!important;
+		border-top: solid 2px rgba(0,0,0,.6);
+		border-bottom: solid 2px rgba(0,0,0,.6);
+		border-right: solid 2px rgba(0,0,0,.6);
+		border-left: solid 1px $primary-color!important;
+		h2 {
+			color: $white!important;
+			display: inline!important;
+			&: before {
+				content: "\00a0"!important;
+				background: $primary-color!important;
+				display: inline!important;
+				margin-right: 5px!important;
+			}
+			
+		}
+	}
+	.item-complex .item-content, .item-radio .item-content {
+		background: rgba(0,0,0,0.2)!important;
+		padding-right: 15px!important;
+	}
+	
+}
+.c-green {
+	color: #14ed29!important;
+}
+
+.bg-backed {
+	background: rgba(0,0,0,0.4)!important;
+	background-color: rgba(0,0,0,0.4)!important;
+}
+
+.profile-head {
+	width: auto;
+	background: transparent!important;
+	margin-top: 20px!important;
+	//border: solid 1px yellow!important;
+	//overflow: auto!important;
+	padding-bottom: 20px!important;
+	min-height: 180px!important;
+	background-image: url("https: //image.ibb.co/jgCmNm/brittanyrohde.jpg")!important;
+	background-size: cover!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
+	.icon-bio {
+		background: red!important;
+		float: left!important;
+		width: 20%!important;
+		position: absolute!important;
+	}
+	
+	.status-block {
+		background: rgba(0,0,0,0.4)!important;
+		width: 100%!important;
+		position: relative!important;
+		padding: 10px!important;
+		text-align: right;
+	}
+	
+	/*.overlay {
+		background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.95));
+		opacity: .65;
+		width: 100%!important;
+		min-height: 250px!important;
+		z-index: 0px!important;
+		position: absolute!important;
+	}
+	
+	*/}
+.footer-img-block {
+	background: rgba(0,0,0,0.4)!important;
+	background-color: rgba(0,0,0,0.4)!important;
+	padding: 10px 20px 10px 20px!important;
+	span {
+		small {
+			b {
+				color: $primary-color!important;
+				font-weight: bold!important;
+			}
+			
+		}
+	}
+	.call-profile {
+		float: right!important;
+		margin-top: -18px!important;
+		margin-right: 0px!important;
+		text-align: center!important;
+		padding-top: 6px!important;
+		i {
+			font-size: 22px!important;
+		}
+		
+	}
+}
+.rounded {
+	width: 38px!important;
+	height: 38px!important;
+	border-radius: 50%!important;
+	border: solid 2px $white!important;
+}
+
+.ehh {
+	background-color: red!important;
+}
+
+.btn-auto-scroll {
+	display: none!important;
+}
+
+.chat-block {
+	width: 100%!important;
+	max-height: 39.5%!important;
+	//min-height: 185px!important;
+	//border: solid 1px yellow!important;
+	overflow: auto!important;
+	overflow-y: auto!important;
+	//padding-bottom: 5px!important;
+	.chat-bubble-sender {
+		padding: 10px!important;
+		background: rgba(255,255,255,0.95)!important;
+		color: $darker-light!important;
+		border-right: solid 10px rgba(0,0,0,0.8)!important;
+		text-align: right!important;
+		div {
+			font-weight: bold;
+			color: $darker!important;
+			text-align: right!important;
+			span {
+				float: left!important;
+				font-weight: normal!important;
+				font-size: 11px!important;
+			}
+			
+		}
+	}
+	.chat-bubble-user {
+		padding: 10px!important;
+		background: #29bf55!important;
+		color: $light-extra!important;
+		border-left: solid 10px #067c28!important;
+		text-align: left!important;
+		div {
+			font-weight: bold;
+			color: $white!important;
+			text-align: left!important;
+			span {
+				float: right!important;
+				font-weight: normal!important;
+				font-size: 11px!important;
+			}
+			
+		}
+	}
+}
+.chat-writer {
+	padding: 5px!important;
+	background: $white!important;
+	position: fixed!important;
+	bottom: 0px!important;
+	width: 100%!important;
+	-webkit-box-shadow: 0px 5px 46px -7px rgba(0,0,0,0.85);
+	-moz-box-shadow: 0px 5px 46px -7px rgba(0,0,0,0.85);
+	box-shadow: 0px 5px 46px -7px rgba(0,0,0,0.85);
+	text-align: right!important;
+	.chat-input {
+		border: solid 1px rgba(0,0,0,0.07)!important;
+		display: inline!important;
+		float: left!important;
+		width: 75%!important;
+		text-align: left!important;
+		padding-left: 10px!important;
+		height: 36.5px!important;
+	}
+	
+	.chat-emoji {
+		border: none!important;
+		background: transparent!important;
+		i {
+			font-size: 25px!important;
+			color: $darker-light!important;
+			&: hover {
+				color: $darker!important;
+			}
+			
+		}
+	}
+	.chat-send {
+		border: none!important;
+		background: transparent!important;
+		i {
+			font-size: 25px!important;
+			color: $darker-light!important;
+			&: hover {
+				color: $darker!important;
+			}
+			
+		}
+	}
+}
+.forum-block {
+	overflow: auto!important;
+	max-height: 73%;
+	//border: solid 1px orange!important;
+	padding: 0px 5px 0px 5px!important;
+	width: 100%!important;
+	background: transparent!important;
+	.item {
+		background: $white!important;
+		h2 {
+			font-weight: bold!important;
+			font-size: 15px!important;
+			span {
+				font-size: 9px!important;
+				font-weight: normal!important;
+				float: right!important;
+			}
+			
+		}
+		p {
+			white-space: normal!important;
+		}
+		
+	}
+	.item.forum-msj-alt {
+		background: rgba(255,255,255,0.95)!important;
+		h2 {
+			font-weight: bold!important;
+			font-size: 15px!important;
+			span {
+				font-size: 9px!important;
+				font-weight: normal!important;
+				float: right!important;
+			}
+			
+		}
+		p {
+			white-space: normal!important;
+		}
+		
+	}
+}
+.forum-writer {
+	padding: 5px!important;
+	background: $white!important;
+	position: fixed!important;
+	bottom: 0px!important;
+	width: 100%!important;
+	-webkit-box-shadow: 0px 5px 46px -7px rgba(0,0,0,0.85);
+	-moz-box-shadow: 0px 5px 46px -7px rgba(0,0,0,0.85);
+	box-shadow: 0px 5px 46px -7px rgba(0,0,0,0.85);
+	text-align: right!important;
+	z-index: 999999999!important;
+	.chat-input {
+		border: solid 1px rgba(0,0,0,0.07)!important;
+		display: inline!important;
+		float: left!important;
+		width: 75%!important;
+		text-align: left!important;
+		padding-left: 10px!important;
+		height: 36.5px!important;
+	}
+	
+	.chat-emoji {
+		border: none!important;
+		background: transparent!important;
+		i {
+			font-size: 25px!important;
+			color: $darker-light!important;
+			&: hover {
+				color: $darker!important;
+			}
+			
+		}
+	}
+	.chat-send {
+		border: none!important;
+		background: transparent!important;
+		i {
+			font-size: 25px!important;
+			color: $darker-light!important;
+			&: hover {
+				color: $darker!important;
+			}
+			
+		}
+	}
+}
+//EVENT
+.event-block {
+	width: 100%;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center!important;
+	min-height: 190px!important;
+	overflow: auto!important;
+	.event-desciption {
+		padding: 8px!important;
+		background: rgba(0,0,0,0.8)!important;
+		top: 0px!important;
+		position: relative!important;
+		b {
+			color: $primary-color!important;
+		}
+		
+		.event-date {
+			color: orange!important;
+			top: 10px!important;
+			right: 10px!important;
+			position: absolute!important;
+			font-size: 11px!important;
+		}
+		
+	}
+}
+//FOOD
+
+
+.sepalabola {
+	text-align: right;
+}
+
+.food-block {
+	width: 100%;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center!important;
+	min-height: 190px!important;
+	overflow: auto!important;
+	.food-desciption {
+		padding: 8px!important;
+		background: rgba(0,0,0,0.8)!important;
+		top: 0px!important;
+		position: relative!important;
+		b {
+			color: orange!important;
+		}
+		
+		.food-phone {
+			a {
+				text-decoration: none!important;
+				color: orange!important;
+			}
+			
+			color: orange!important;
+			top: 10px!important;
+			right: 10px!important;
+			position: absolute!important;
+			font-size: 11px!important;
+		}
+		
+	}
+}
+.top-container {
+	height: calc(100% - 2px);
+	overflow: scroll;
+}
+
+.top-esacosa {
+	height: calc(100% - 105px);
+	overflow: scroll;
+}
+
+.bottom-form {
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	width: 100%;
+	background-color: white;
+	button {
+		margin: 0px !important;
+	}
+	
+}
+// This code is required for Angular Google Maps to funciton
+ui-gmap-google-map {
+	height: 100%;
+	width: 100%;
+	display: block;
+	.angular-google-map {
+		height: 100%;
+		.angular-google-map-container {
+			height: 100%;
+		}
+		
+	}
+}
+/*! =========================================================
+ *
+ *
+ * =========================================================
+ *
+ *
+ *                       _oo0oo_
+ *                      o8888888o
+ *                      88" . "88
+ *                      (| -_- |)
+ *                      0\  =  /0
+ *                    ___/`---'\___
+ *                  .' \|     |// '.
+ *                 / \|||: |||// \
+ *                / _||||| -: - |||||- \
+ *               |   | \\  -  /// |   |
+ *               | \_|  ''\---/''  |_/ |
+ *               \  .-\__  '-'  ___/-. /
+ *             ___'. .'  /--.--\  `. .'___
+ *          ."" '<  `.___\_<|>_/___.' >' "".
+ *         | |: `- \`.;
+`\ _ /`;
+.`/ - `: | |
+ *         \  \ `_.   \_ __\ /__ _/   .-` /  /
+ *     =====`-.____`.___ \_____/___.-`___.-'=====
+ *                       `=---='
+ *
+ *     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ *               Buddha Bless: "No Bugs"
+ *
+ * ========================================================= */
+/*RESPONSIVE STYLES ADJUST*/
+/*media styles for responsive*/
+@media (max-width: 321px) {
+	.forum-block {
+		max-height: 66%!important;
+	}
+	
+}
+@media (max-width: 469px) {
+	max-height: 71%!important;
+}
+
+@media (max-width: 470px) {
+	max-height: 71%!important;
+	border: solid 1px red!important;
+}
+
+@media (min-width: 481px) and (max-width: 550px) {
+	max-height: 71%!important;
+	border: solid 1px red!important;
+}
+
+@media (min-width: 551px) and (max-width: 650px) {}
+@media (min-width: 651px) and (max-width: 767px) {}
+@media (min-width: 768px) and (max-width: 900px) {}
+@media (min-width: 901px) and (max-width: 1023px) {}
+@media (min-width: 1024px) and (max-width: 1080px) {}
+@media (min-width: 1081px) and (max-width: 1250px) {}
+@media (min-width: 1251px) and (max-width: 2000px) {}
+ion-view,.pane,.view {
+	background-color: #181E25;
+}
+
+body {
+	color: #EBEAF1;
+}
+
+body.platform-ios {
+	font-family: Lato, sans-serif;
+}
+
+.ionic-body.platform-ios {
+	font-family: Lato, sans-serif;
+}
+
+body.platform-android {
+	font-family: Lato, sans-serif;
+}
+
+.ionic-body.platform-android {
+	font-family: Lato, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.tab-item,input,button,select,textarea {
+	font-family: inherit;
+}
 

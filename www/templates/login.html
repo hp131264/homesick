@@ -1,0 +1,36 @@
+<ion-view title="Login" hide-nav-bar="true" id="page5" style="background-color:#FFFFFF;">
+  <ion-content padding="true" style="background: url(img/QgPiX9OKSYiU5CM9L3LE_draft02-mod-3.gif) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div class="spacer" style="width: 300px; height: 51px;"></div>
+    <div class="logo-login">
+      <img src="img/uDCljLxYTimTUAsix5ZT_homesick250-2.png" style="display: block; width: 150pt; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <form id="login-form2" class="list">
+      <div class="spacer" style="width: 300px; height: 29px;"></div>
+      <div id="login-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#FFFFFF;font-size:17px;">
+          <strong>Meet people from your nation outside your nation</strong>
+        </p>
+      </div>
+      <ion-list id="login-list3">
+        <label class="item item-input" id="login-input6">
+          <span class="input-label">User</span>
+          <input type="text" placeholder="" ng-model="dato1">
+        </label>
+        <label class="item item-input" id="login-input5">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="" ng-model="dato2">
+        </label>
+      </ion-list>
+      <div id="login-button-bar2" class="button-bar"></div>
+      <button id="login-button24" ng-click="login(dato1,dato2)" class="button button-balanced button-block">Log in</button>
+      <div class="spacer" style="width: 300px; height: 13px;"></div>
+      <a ui-sref="signup()" id="login-button3" style="font-weight:500;font-size:16px;" class="button button-light button-small button-block button-clear">Don't have an account?
+        <b>Sign up</b>
+      </a>
+      <div id="login-button-bar3" class="button-bar mt-minus-10"></div>
+      <a ui-sref="homesick()" id="login-button2" class="button button-positive button-block icon-left ion-social-facebook to-hide">Sing In with Facebook</a>
+      <a ui-sref="homesick()" id="login-button25" class="button button-calm button-block icon-left ion-social-twitter to-hide">Sing In with Twitter</a>
+      <a ui-sref="homesick()" id="login-button26" class="button button-stable button-block icon-left ion-social-instagram-outline to-hide">Sing In with Instagram</a>
+    </form>
+  </ion-content>
+</ion-view>

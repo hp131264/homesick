@@ -1,0 +1,21 @@
+<ion-view title="Homesick" id="page2" style="background-color:#181E25;">
+  <ion-content padding="true" class="has-header">
+    <div class="spacer" style="width: 300px; height: 24px;"></div>
+    <h2 id="homesick2-heading4" style="color:#FFFFFF;font-weight:600;text-align:center;">{{datos.pais}} in {{datos.dondeesta}}</h2>
+    <a ui-sref="homesick6()" id="homesick2-button14" onclick="autoScrollForum()" style="color:#18C0C7;font-size:16px;border-radius:4px 4px 4px 4px;" class="button button-stable button-small button-block button-clear icon ion-ios-book-outline mt-minus-10">
+    View {{datos.pais}} Forum</a>
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <ion-list id="homesick2-list13" ng-repeat="usuario in usuariospais">
+      <ion-item class="item-thumbnail-left btn-autoscroll" id="homesick2-list-item11" ui-sref="homeSickChat({&quot;usuariotelefono&quot;:&quot;&quot;+usuario.usuario+&quot;&quot;})">
+        <img src="{{usuario.foto}}">
+        <h2>{{usuario.nombre}}</h2>
+        <p>{{usuario.universidad}}</p>
+        <div class="footer-peoples">{{usuario.edad}} Años</div>
+        <p></p>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="width: 300px; height: 14px;"></div>
+    <a ui-sref="homesick6()" id="homesick2-button16" onclick="autoScrollForum()" style="color:#18C0C7;font-size:16px;border-radius:4px 4px 4px 4px;" class="button button-stable button-block button-clear icon ion-ios-book-outline bg-backed"> View {{datos.pais}} Forum</a>
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+  </ion-content>
+</ion-view>

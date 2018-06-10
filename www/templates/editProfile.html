@@ -1,0 +1,57 @@
+<ion-view title="EditProfile" style="background-color:#181E25;">
+  <ion-content padding="true" class="has-header">
+    <div class="spacer" style="width: 300px; height: 31px;"></div>
+    <div class="img-profile">
+      <img src="{{imgURI}}" style="display: block; width: 65pt; height: auto; margin-left: auto; margin-right: auto;" ng-click="takePhotoGallery()">
+    </div>
+    <div style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#9B9B9B;">Tap the picture to change it</p>
+      <button ng-click="takePhoto()">Take Photo</button>
+    </div>
+    <h2 style="color:#FFFFFF;font-weight:600;text-align:center;">Edit Profile</h2>
+    <div class="spacer" style="width: 300px; height: 13px;"></div>
+    <form class="list">
+      <ion-list>
+        <label class="item item-input">
+          <input type="text" placeholder="First name" ng-model="datos.nombre">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="text" placeholder="Last name" ng-model="datos.apellidos">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="tel" placeholder="Phone number" ng-model="datos.celular">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="date" placeholder="YYYY-MM-DD" ng-model="datos.fechanacimiento">
+        </label>
+      </ion-list>
+      <label class="item item-select -h mt-10">
+        <span class="input-label">Country</span>
+        <select ng-model="datos.pais">
+          <option ng-repeat="pais in paises">{{pais.nombre}}</option>
+        </select>
+      </label>
+      <label class="item item-input mt-10">
+        <input type="text" placeholder="City and State" ng-model="datos.universidad">
+      </label>
+      <label class="item item-select -h mt-10">
+        <span class="input-label">Gender</span>
+        <select ng-model="datos.sexo">
+          <option>M</option>
+          <option>F</option>
+        </select>
+      </label>
+      <label class="item item-select -h mt-10">
+        <span class="input-label">Relationship Status</span>
+        <select ng-model="datos.estadocivil">
+          <option>Single</option>
+          <option>Married</option>
+          <option>DIvorced</option>
+          <option>Engaged</option>
+          <option>Other</option>
+        </select>
+      </label>
+    </form>
+    <button ng-click="actualizadatos()" class="button button-balanced button-block">Save Changes</button>
+  </ion-content>
+</ion-view>

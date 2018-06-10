@@ -1,0 +1,62 @@
+<ion-view title="Signup" hide-nav-bar="true" style="background-color:#181E25;">
+  <ion-content padding="true" style="background: url(https://s3.amazonaws.com/ionic-io-static/KzDuVsPDQyeNFYwjE27w_draft02-mod-3.gif) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <div class="spacer" style="width: 300px; height: 9px;"></div>
+    <div>
+      <img src="img/hGllK1g5QwmGaSBpw6aH_homesick250-2.png" style="display: block; width: 150pt; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <div style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#FFFFFF;font-size:15px;">Personal information</p>
+    </div>
+    <form class="list">
+      <ion-list>
+        <label class="item item-input mt-10">
+          <input type="text" placeholder="Email" ng-model="datos.usuario">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="password" placeholder="Password" ng-model="datos.password">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="text" placeholder="First name" ng-model="datos.nombre">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="text" placeholder="Last name" ng-model="datos.apellidos">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="tel" placeholder="Phone number" ng-model="datos.celular">
+        </label>
+        <label class="item item-input mt-10">
+          <input type="date" placeholder="YYYY-MM-DD" ng-model="datos.fechanacimiento">
+        </label>
+      </ion-list>
+      <label class="item item-select select-input-max-h mt-10">
+        <span class="input-label">Country</span>
+        <select ng-model="datos.pais">
+          <option ng-repeat="pais in paises">{{pais.nombre}}</option>
+        </select>
+      </label>
+      <label class="item item-input mt-10">
+        <input type="text" placeholder="City and State" ng-model="datos.universidad">
+      </label>
+      <label class="item item-select select-input-max-h mt-10">
+        <span class="input-label">Gender</span>
+        <select ng-model="datos.sexo">
+          <option>M</option>
+          <option>F</option>
+        </select>
+      </label>
+      <label class="item item-select select-input-max-h mt-10">
+        <span class="input-label">Relationship Status</span>
+        <select ng-model="datos.estadocivil">
+          <option>SIngle</option>
+          <option>Married</option>
+          <option>Divorced</option>
+          <option>Engaged</option>
+          <option>Other</option>
+        </select>
+      </label>
+    </form>
+    <button ng-click="altausuario()" class="button button-balanced button-block">Next</button>
+    <a ui-sref="login()" style="font-size:15px;" class="button button-light button-small button-block button-clear">Already have an account? Log in</a>
+  </ion-content>
+</ion-view>

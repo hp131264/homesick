@@ -1,0 +1,22 @@
+<ion-view title="Homesick" id="page12">
+  <ion-content padding="false" scroll="false" class="has-header">
+    <div class="spacer" style="width: 320px; height: 28px;"></div>
+    <ion-scroll id="homesick6-container5" scroll-glue="" class="top-esacosa">
+      <ion-list id="homesick6-list11" ng-repeat="item in messages">
+        <ion-item class="item-avatar" id="homesick6-list-item28" ng-show="datos.usuario != item.email">
+          <img src="{{item.foto}}">
+          <h2>{{item .name}}</h2>
+          <p style="white-space:normal;">{{item .text}}</p>
+        </ion-item>
+        <ion-item id="homesick6-list-item12" ng-show="datos.usuario == item.email" class="sepalabola">{{item.text}}</ion-item>
+      </ion-list>
+    </ion-scroll>
+    <form id="homesick6-form9" class="list bottom-form" ng-submit="addMessage()">
+      <label class="item item-input" id="homesick6-input22">
+        <span class="input-label">Message</span>
+        <input type="text" placeholder="" ng-model="data.message">
+      </label>
+      <button id="homesick6-button19" class="button button-positive button-block">Submit</button>
+    </form>
+  </ion-content>
+</ion-view>

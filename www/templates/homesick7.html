@@ -1,0 +1,33 @@
+<ion-view title="Homesick">
+  <ion-content padding="true" scroll="false">
+    <div class="spacer" style="width: 320px; height: 30px;"></div>
+    <h2 style="color:#FFFFFF;font-weight:600;text-align:center;" class="mt-10">Events in {{datos.dondeesta}}</h2>
+    <div style="text-align:center;" class="show-list-numbers-and-dots mt-minus-10">
+      <p style="color:#FFFFFF;font-size:15px;">Enjoy interesting events</p>
+    </div>
+    <div class="spacer" style="width: 320px; height: 9px;"></div>
+    <ion-scroll class="top-container">
+      <ion-list ng-repeat="evento in eventos">
+        <ion-item style="background-color:#444;border-color:#000000">
+          <div class="event-block mt-10" style="background: url('{{evento.fotoevento}}');">
+            <div class="event-desciption">
+              <b>{{evento.ciudad}}</b>
+              <br>
+              <b>{{evento.nombreevento}}</b>
+              <div class="event-date">
+                <p>
+                  <b>{{evento.fechaevento}}</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item item-body" style="background-color:#444;border-color:#444">
+            <div style="text-align:justify;" class="show-list-numbers-and-dots">
+              <p style="margin-top:0px;color:#18c0c7;">{{evento.descripcionevento}}</p>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-scroll>
+  </ion-content>
+</ion-view>

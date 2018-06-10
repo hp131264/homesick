@@ -1,0 +1,17 @@
+<ion-view title="Homesick" hide-back-button="true" style="background-color:#181E25;">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon ion-log-out" ng-click="logout()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-ios-people-outline" ng-click="verperfil()"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" style="background: url('{{datos.fotofondo}}') no-repeat center;background-size:cover;" class="has-header">
+    <div class="spacer" style="width: 300px; height: 62px;"></div>
+    <h2 style="color:#FFFFFF;font-weight:600;text-align:center;">{{datos.pais}} in {{datos.dondeesta}} </h2>
+    <div class="spacer" style="width: 300px; height: 80px;"></div>
+    <button ui-sref="homesick2" class="option-blocks-menu mr-10">
+      <i class="icon ion-ios-contact-outline"></i>
+      <br> People
+    </button>
+  </ion-content>
+</ion-view>
