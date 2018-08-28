@@ -2,7 +2,7 @@ angular.module('app.services', [])
 
 
 .service('BlankService', ['$http',function($http){
-    var BASE_URL = 'http://108.175.2.51:1338/';
+    var BASE_URL = 'https://serviciossails.appspot.com/';
     return {
             validausuario:function(usuario,password){
                 return $http.get(BASE_URL+'usuarios/validausuario/?idusuario='+usuario+'&password='+password);
